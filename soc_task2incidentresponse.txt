@@ -1,0 +1,66 @@
+1. Analyze incoming security alerts/logs
+
+From splunk search
+-2 failed login attempts
+-Malware detected: rootkit
+-Malware detected: trojan
+
+2. Identify suspicious activities. 
+i. Failed logins :could indicate bruteforce attempts or someone trying to guess passwords.
+ii. Rootkit: highly dangerous, attacker may be hiding inside the system.
+iii. Trojan: attacker could gain remote control of the host.
+
+3. Categorize & prioritize alerts by severity
+4. ⁠
+Failed login attempts (Medium) Could be brute-force but only 2 attempts logged
+
+Rootkit detected (High) Rootkits compromise OS-level integrity
+
+Trojan detected (High) Trojans give attackers control over system
+
+4. Draft an Incident Response Report
+
+Incident Response Report – soc_Task2
+- Incident Title: Multiple Suspicious Activities Detected (Failed Logins, Rootkit, Trojan)
+- Date: 13/08/25
+- Analyst: Adelodun Funke Ayomide
+
+Summary:
+During log analysis in Splunk, suspicious activities were identified including multiple failed login attempts and two malware detections (rootkit and trojan). These incidents indicate possible unauthorized access attempts and confirmed malware infections.
+
+Findings:
+i. Failed Login Attempts
+- Description: 2 consecutive failed logins detected
+- Impact: Potential brute-force or stolen credential testing
+-Priority: Medium
+II. Rootkit Detected
+- Description: Rootkit signature found in malware logs.
+- Impact: Rootkits allow attackers to hide presence and gain persistent access
+- Priority: High
+iii. Trojan Detected
+- Description: Trojan malware activity confirmeD
+- Impact: Trojan may allow remote attacker access and data theft
+-Priority: High
+
+Suggested next steps:
+i. Immediately isolate affected system(s)
+ii.Run antivirus/EDR scans to remove rootkit and trojan
+- Reset passwords for accounts with failed login attempts
+- Review system/network logs for lateral movement.
+- Escalate to Incident Response Team for full containment and eradication.
+
+5. Simulate communication with stakeholders about the incident
+
+Subject: Security Incident Detected – Immediate Action Required
+
+Hello Team,
+
+This is to notify you that suspicious activities were detected in our environment during SOC monitoring. Alerts include:
+2 failed login attempts
+Malware detections (Rootkit & Trojan)
+
+Severity is rated High due to confirmed malware presence. We recommend immediate system isolation, password resets, and escalation to Incident Response for full investigation.
+
+Kind regards,
+Adelodun Funke Ayomide
+SOC Intern Analyst
